@@ -1,0 +1,796 @@
+/* ============================================================
+   Academic Professional Override — Apple-inspired minimal style
+   Clean, concise, content-focused. Every element earns its place.
+   ============================================================ */
+
+/* ------ Base ------ */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #1d1d1f;
+    background-color: #fff;
+    font-size: 15px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6,
+.bold, .uppercase {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.02em;
+}
+
+h4 {
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+p, li, address, span, a, em, strong, small, blockquote {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+}
+
+a {
+    color: #1A6B8A;
+    transition: color 0.15s ease;
+}
+
+a:hover {
+    color: #0f4a60;
+}
+
+::selection {
+    background: rgba(26, 107, 138, 0.15);
+}
+
+/* ------ Navigation ------ */
+#nav-bar {
+    background: rgba(255, 255, 255, 0.92);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: none;
+}
+
+#nav-bar.sticky {
+    background: rgba(255, 255, 255, 0.92);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#logo h4,
+#logo h4 a {
+    color: #1d1d1f !important;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -0.02em;
+}
+
+.navbar-nav > li > a {
+    color: #1d1d1f !important;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 15px 13px;
+    opacity: 0.72;
+    transition: opacity 0.15s ease;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+    opacity: 1;
+    color: #1d1d1f !important;
+    background: transparent !important;
+}
+
+.navbar-nav > li.active > a,
+.navbar-nav > li.active > a:hover {
+    color: #1d1d1f !important;
+    opacity: 1;
+    font-weight: 600;
+    background: transparent !important;
+}
+
+/* Remove colored underline on active nav */
+.navbar-nav > li.active > a:after,
+.navbar-nav > li > a:after {
+    background: transparent !important;
+    height: 0 !important;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #1d1d1f;
+}
+
+/* ------ Page Header (subpages) — minimal ------ */
+#page-head {
+    max-height: 50px;
+    min-height: 40px;
+    padding: 15px 0 !important;
+    opacity: 0.5;
+}
+
+/* ------ Layout & Spacing ------ */
+.p-50-v {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 920px;
+}
+
+/* ------ Section Titles ------ */
+.le-title {
+    margin-bottom: 30px;
+}
+
+.le-title h4.title {
+    font-weight: 600;
+    font-size: 24px;
+    color: #1d1d1f;
+    letter-spacing: -0.03em;
+    text-transform: none;
+}
+
+/* Hide decorative icons next to section titles */
+.le-title [class^="icon-"],
+.le-title [class*=" icon-"] {
+    display: none;
+}
+
+/* Keep fa icons in research themes visible */
+.le-title .fa,
+.le-title .fa-solid,
+.le-title i.fa-solid {
+    display: inline-block;
+    color: #1A6B8A;
+    opacity: 0.7;
+    font-size: 18px;
+}
+
+.page-title {
+    margin-bottom: 28px;
+}
+
+/* ------ Gray Sections ------ */
+.bg-gray,
+section.bg-gray {
+    background-color: #f5f5f7 !important;
+}
+
+/* ------ Homepage About / Hero ------ */
+#about {
+    padding: 70px 0 60px;
+}
+
+#about .title-huge {
+    font-weight: 600;
+    font-size: 32px;
+    color: #1d1d1f;
+    letter-spacing: -0.03em;
+    margin-bottom: 2px;
+}
+
+#about h5 {
+    font-weight: 400;
+    color: #6e6e73;
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+#about p {
+    color: #424245;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Profile image — clean */
+.le-member .member-image img {
+    border-radius: 8px;
+}
+
+.le-member .line-1,
+.le-member .line-2 {
+    display: none;
+}
+
+/* ------ Buttons ------ */
+.le-btn {
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0;
+    padding: 8px 20px;
+    transition: all 0.2s ease;
+    border-width: 1px;
+}
+
+.le-btn:hover {
+    transform: none;
+    box-shadow: none;
+    opacity: 0.85;
+}
+
+/* ------ Blockquotes ------ */
+.le-blockquote {
+    border-left: 2px solid #1A6B8A;
+    background: #f5f5f7;
+    padding: 14px 20px;
+    margin: 15px 0;
+    border-radius: 0;
+}
+
+.le-blockquote p {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #424245;
+}
+
+.le-blockquote small {
+    color: #86868b;
+    font-style: italic;
+    font-size: 13px;
+}
+
+/* ------ Research Interest Cards ------ */
+.iconic-box {
+    background: #fff;
+    border: 1px solid #e8e8ed;
+    border-radius: 12px;
+    padding: 28px 22px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: none;
+}
+
+.iconic-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.iconic-box .head {
+    margin-bottom: 14px;
+}
+
+.iconic-box .head h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d1d1f;
+    text-transform: none;
+}
+
+.iconic-box .head i,
+.iconic-box .head .fa-solid {
+    color: #1A6B8A;
+}
+
+.iconic-box p {
+    font-size: 14px;
+    color: #6e6e73;
+    line-height: 1.65;
+}
+
+/* ------ Selected Publications (homepage) ------ */
+.publication-list {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: pub-counter;
+}
+
+.publication-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e8ed;
+    counter-increment: pub-counter;
+}
+
+.publication-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.publication-list h4 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.publication-list h4 a {
+    color: #1A6B8A;
+}
+
+.publication-list h4 a:hover {
+    color: #0f4a60;
+}
+
+.publication-list p {
+    font-size: 13px;
+    color: #6e6e73;
+    margin-bottom: 0;
+}
+
+/* ------ Publications Page ------ */
+.pub-year {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #1d1d1f !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    margin: 40px 0 16px 0 !important;
+    display: block;
+}
+
+/* .first-author indicator removed */
+
+#page-content ol {
+    padding-left: 20px;
+}
+
+#page-content ol li {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 1.6;
+}
+
+#page-content ol li:last-child {
+    border-bottom: none;
+}
+
+#page-content ol li h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 3px;
+    line-height: 1.45;
+}
+
+#page-content ol li h4 a {
+    color: #1A6B8A;
+}
+
+#page-content ol li p {
+    font-size: 13px;
+    color: #6e6e73;
+    margin-bottom: 0;
+}
+
+/* ------ Timeline (Experience, Talks) ------ */
+.timeline-holder {
+    border-left-color: #e8e8ed;
+}
+
+.timeline-item {
+    margin-bottom: 35px;
+}
+
+.timeline-item .icon-holder {
+    background: #1A6B8A;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+.timeline-item .icon-holder i,
+.timeline-item .icon-holder span {
+    font-size: 14px;
+}
+
+.timeline-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d1d1f;
+    text-transform: none;
+}
+
+.timeline-item p,
+.timeline-item li {
+    font-size: 14px;
+    color: #424245;
+    line-height: 1.7;
+}
+
+.timeline-item ul {
+    padding-left: 18px;
+}
+
+.timeline-item .info-box .info-big {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1A6B8A;
+    text-transform: none;
+}
+
+/* ------ News Page ------ */
+#page-content article h4.uppercase {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d1d1f;
+    text-transform: none;
+}
+
+#page-content article > ul {
+    padding-left: 18px;
+}
+
+#page-content article > ul > li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #424245;
+    line-height: 1.7;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* ------ About Page ------ */
+#skills-section h5 {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1d1d1f;
+    text-transform: none;
+}
+
+#skills-section p {
+    font-size: 14px;
+    color: #6e6e73;
+}
+
+/* Education blockquotes */
+#page-content .le-blockquote ul {
+    margin-bottom: 5px;
+}
+
+#page-content .le-blockquote li {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Service section */
+#services .services-item {
+    text-align: left;
+}
+
+#services .services-item span[class^="icon-"] {
+    display: none;
+}
+
+#services .services-item h4 {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: none;
+}
+
+#services .services-item p {
+    font-size: 14px;
+    color: #6e6e73;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+/* ------ Research Page ------ */
+#research-vision p {
+    font-size: 16px;
+    color: #424245;
+    line-height: 1.85;
+    max-width: 720px;
+}
+
+#page-content article p {
+    font-size: 14px;
+    color: #424245;
+    line-height: 1.75;
+}
+
+#page-content article ul li a {
+    color: #1A6B8A;
+    font-weight: 500;
+}
+
+/* ------ Footer ------ */
+footer.bg-dark {
+    background: #1d1d1f !important;
+    padding: 50px 0;
+}
+
+footer h4.bold,
+footer h4.bold a {
+    color: #f5f5f7 !important;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -0.02em;
+}
+
+footer .title-marked {
+    font-size: 12px;
+    font-weight: 600;
+    color: #86868b;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+footer .info-list li {
+    font-size: 13px;
+    color: #86868b;
+}
+
+footer .info-list a {
+    color: #a1a1a6;
+}
+
+footer .info-list a:hover {
+    color: #f5f5f7;
+}
+
+footer address {
+    color: #86868b;
+    font-size: 13px;
+    font-style: normal;
+}
+
+footer .social-icons {
+    display: inline-block;
+    padding: 0;
+}
+
+footer .social-icons li {
+    display: inline-block;
+}
+
+footer .social-icons a {
+    color: #86868b;
+    border-color: #424245;
+    transition: all 0.15s ease;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+}
+
+footer .social-icons a:hover {
+    color: #f5f5f7;
+    border-color: #f5f5f7;
+    background: transparent;
+}
+
+/* ------ Scroll-to-top ------ */
+.goto-top {
+    border-radius: 50%;
+    background: rgba(29, 29, 31, 0.7);
+}
+
+/* ------ Kill decorative template effects ------ */
+.pace .pace-progress {
+    background: #1A6B8A;
+    height: 1px;
+}
+
+/* Disable scroll-reveal jank */
+[data-sr-id] {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Remove touch-hover template effects */
+.touch-hover:before,
+.touch-hover:after {
+    display: none !important;
+}
+
+/* ------ Responsive ------ */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    #about {
+        padding: 30px 0;
+    }
+
+    #about .title-huge {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #about h5 {
+        text-align: center;
+    }
+
+    #about p {
+        text-align: center;
+    }
+
+    /* Center profile image on mobile */
+    #about .le-member {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #about .member-image img {
+        max-width: 180px;
+        margin: 0 auto;
+    }
+
+    /* Center buttons on mobile */
+    #about .le-btn {
+        display: inline-block;
+        margin-bottom: 8px;
+        font-size: 12px;
+        padding: 7px 16px;
+    }
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .p-50-v {
+        padding: 30px 0;
+    }
+
+    .le-title {
+        margin-bottom: 20px;
+    }
+
+    .le-title h4.title {
+        font-size: 18px;
+    }
+
+    /* Nav mobile menu */
+    .navbar-collapse {
+        background: #fff;
+        border-top: 1px solid #e8e8ed;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .navbar-nav > li > a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    #page-head {
+        max-height: 30px;
+        min-height: 25px;
+        padding: 10px 0 !important;
+    }
+
+    /* Research interest cards — 2 per row on mobile */
+    .iconic-box {
+        margin-bottom: 15px;
+        padding: 20px 16px;
+    }
+
+    .iconic-box .head h4 {
+        font-size: 14px;
+    }
+
+    .iconic-box p {
+        font-size: 13px;
+    }
+
+    /* Collaborations section */
+    #collaborations .row {
+        gap: 20px 20px !important;
+    }
+
+    #collaborations p {
+        font-size: 13px !important;
+    }
+
+    #collaborations small {
+        font-size: 11px !important;
+    }
+
+    /* Timeline items */
+    .timeline-item {
+        margin-bottom: 25px;
+    }
+
+    .timeline-item h4 {
+        font-size: 15px;
+    }
+
+    .timeline-item p,
+    .timeline-item li {
+        font-size: 13px;
+    }
+
+    .timeline-item .info-box .info-big {
+        font-size: 11px;
+    }
+
+    /* Publications page */
+    #page-content ol li h4 {
+        font-size: 14px;
+    }
+
+    #page-content ol li p {
+        font-size: 12px;
+    }
+
+    .pub-year {
+        font-size: 18px !important;
+        margin: 30px 0 12px 0 !important;
+    }
+
+    /* Education blockquotes */
+    .le-blockquote {
+        padding: 12px 14px;
+        margin: 10px 0;
+    }
+
+    .le-blockquote ul li {
+        font-size: 13px;
+    }
+
+    /* About page skills */
+    #skills-section h5 {
+        font-size: 13px;
+    }
+
+    #skills-section p {
+        font-size: 13px;
+    }
+
+    /* News list */
+    #news ul li,
+    #page-content article > ul > li {
+        font-size: 13px;
+    }
+
+    /* Footer */
+    footer.bg-dark {
+        padding: 25px 0;
+    }
+
+    footer h4.bold {
+        font-size: 15px !important;
+    }
+
+    footer .social-icons a {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 13px;
+    }
+
+    /* Prevent horizontal overflow */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Fix Bootstrap column padding on mobile */
+    .col-xs-12 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 730px;
+    }
+
+    #about .member-image img {
+        max-width: 200px;
+    }
+
+    .iconic-box {
+        margin-bottom: 15px;
+        padding: 22px 18px;
+    }
+
+    .timeline-item h4 {
+        font-size: 15px;
+    }
+}
