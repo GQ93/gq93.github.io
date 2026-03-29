@@ -432,17 +432,25 @@ if(enableSmoothScroll){
             //sending contact form
             $(".contact-form").on('submit', function (e) {
                 e.preventDefault();
+                var form = $(this);
+                var actionUrl = form.attr('action');
+
+                // GitHub Pages will not serve PHP, so only submit when the form
+                // explicitly declares a valid endpoint.
+                if (!actionUrl) {
+                    return;
+                }
 
                 //  triggers contact form validation
 
-                $(".contact-form .submit").fadeOut(function () {
+                form.find(".submit").fadeOut(function () {
                     $('#loading').css('visibility', 'visible');
-                    $.post('submit.php', $(".contact-form").serialize(),
+                    $.post(actionUrl, form.serialize(),
                             function (data) {
-                                $(".contact-form input,.contact-form textarea").not('.submit').val('');
+                                form.find("input,textarea").not('.submit').val('');
                                 $('.message-box').html(data);
                                 $('#loading').css('visibility', 'hidden');
-                                $(".contact-form").css('display', 'none');
+                                form.css('display', 'none');
                             }
                     );
                 });

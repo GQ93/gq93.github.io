@@ -7,7 +7,7 @@ Credits
 This website was built using the LeCV Bootstrap Template, created by bootstrapMB, @LeCV template. Made by bootstrapMB. All Rights Reserved.
 
 License
-Found in the LICENSE.md file.
+Found in the LICENSE file.
 
 Contact
 adamrt9319@gmail.com
